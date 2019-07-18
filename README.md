@@ -5,7 +5,10 @@ more and more about OOP in Python.
 
 
 ### Linked List Class
+By the storing the head node, this class has access to all the nodes in the list. Implement methods such push_back and print_list. 
 
 ### Node Class
+Stores the data for a node and a pointer to the next node in the list.
 
 ### Driver for testing (main.py)
+
