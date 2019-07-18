@@ -40,8 +40,9 @@ class List():
 
     def reverse_list(self):
         """
-        Reverse the direction of the arrows in the list. 
+        Reverse the direction of the arrows in the list. O(2N) solution.
         """
+        pass
 
 
 
