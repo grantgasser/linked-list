@@ -7,9 +7,12 @@ import node
 class List():
     def __init__(self, head=None):
         """
-        A linked list object need only consist of pointer to head node
+        A linked list object need only consist of pointer to head node.
         """
-        self.head = head
+        self._head = head
+
+    def get_head(self):
+        return self._head
 
     def push_back(self, data):
         """
@@ -23,11 +26,11 @@ class List():
         """
         new_node = node.Node(data)
 
-        if not self.head:
-            self.head = new_node
+        if not self._head:
+            self._head = new_node
 
         else:
-            temp = self.head
+            temp = self._head
 
             while(temp.next):
                 temp = temp.next
@@ -38,11 +41,43 @@ class List():
         return self
 
 
-    def reverse_list(self):
+    def reverse_list_iterative(self):
         """
-        Reverse the direction of the arrows in the list. O(2N) solution.
+        Reverse the direction of the arrows in the list. Iterative solution with
+        three pointers: prev, curr, next. Time Complexity: O(N)
         """
-        pass
+        prev = None
+        curr = self._head
+        next = None
+
+        # reverse the list until curr is None
+        while curr:
+            # swap
+            next = curr.next
+            curr.next = prev
+
+            # move forward
+            prev = curr
+            curr = next
+
+
+        #set head to last (now first) node
+        self._head = prev
+
+
+    def reverse_list_recursive(self, curr, prev=None, next=None):
+        """
+        Reverse the direction of the arrows in the list. Recursive solution with
+        three pointers: prev, curr, next. Time Complexity: O(N)
+        """
+        if not curr: # base case, at the end of the list
+            self._head = prev
+        else:
+            next = curr.next
+            curr.next = prev
+
+            # recursive call
+            self.reverse_list_recursive(next, curr)
 
 
 
@@ -51,7 +86,7 @@ class List():
         Iterate through a print data of each node from list (start at head)
         """
 
-        temp = self.head
+        temp = self._head
 
         while(temp):
             print(temp)

@@ -20,7 +20,15 @@ def main():
     linked_list.print_list()
 
     # reverse
-    linked_list.reverse_list()
+    print('\nReversing list...\n')
+    linked_list.reverse_list_iterative()
+
+    # verify
+    linked_list.print_list()
+
+    # reverse
+    print('\nReversing list...\n')
+    linked_list.reverse_list_recursive(linked_list.get_head())
 
     # verify
     linked_list.print_list()
