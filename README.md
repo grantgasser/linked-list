@@ -1,14 +1,20 @@
-# Linked List
+# Summary
 
-Having first written a linked list in C++, I wanted to see if I could also implement a linked list in Python as I learn 
-more and more about OOP in Python.
+This started as a practice project to implement a linked list in Python. Having learned data structures in C++, I wanted to see how to implement them in Python as I learn more about OOP in Python. 
+
+This project is also an exercise in seeing how interrelated common data structures are. For example, a linked list can be implemented as a stack. Also, a binary search tree can be built using the core functionality (nodes and pointers) of a linked list. Additionally, a tree can also be thought of as a graph where the nodes and pointers are vertices and edges. 
 
 
-### Linked List Class
-By the storing the head node, this class has access to all the nodes in the list. Implement methods such `push_back`, `reverse_list_iterative` and `print_list`. 
+## Linked List (base of the project)
+Using the Node class, the List class just contains a head. It has methods that allow it to retrieve the head, append new data, get data at a certain position, insert, delete, reverse, and more.
 
-### Node Class
-Stores the data for a node and a pointer to the next node in the list.
+## Stack (inherits from Linked List)
 
-### Driver for testing (main.py)
+## Tree Node 
+Inherits from Node class used for linked lists. 
+
+## Binary Search Tree
+Using the tree node class, creates a binary search tree with given data.
+
+
 
