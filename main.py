@@ -13,6 +13,7 @@ def main():
     # create the list
     linked_list = list.List(head_node)
 
+    # create list [1,2,4,6,8,10]
     for i in range(2,11,2):
         linked_list.append(i)
 
@@ -33,7 +34,26 @@ def main():
     # verify
     linked_list.print_list()
 
+    # test get_position
+    print('\nExpecting 6:', linked_list.get_position(4))
 
+    # test insert
+    linked_list.insert(99, 3)
+    print('\nExpecting 1,2,99,4,6,8,10:')
+    linked_list.print_list()
+
+    # test insert at position end
+    linked_list.insert(55, 8)
+    print('\nExpecting 1,2,99,4,6,8,10,55:')
+    linked_list.print_list()
+
+    # test insert out of bounds
+    linked_list.insert(21, 10) # expect error message
+
+    # test delete
+    linked_list.delete(99)
+    print('\nExpecting 1,2,4,6,8,10,55:')
+    linked_list.print_list()
 
     #### BST Testing ####
 
