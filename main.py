@@ -14,7 +14,7 @@ def main():
     linked_list = list.List(head_node)
 
     for i in range(2,11,2):
-        linked_list.push_back(i)
+        linked_list.append(i)
 
     # verify
     linked_list.print_list()

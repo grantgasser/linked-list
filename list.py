@@ -14,7 +14,7 @@ class List():
     def get_head(self):
         return self._head
 
-    def push_back(self, data):
+    def append(self, data):
         """
         Push node with new data to the back of the linked list
 
