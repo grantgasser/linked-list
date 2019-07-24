@@ -31,7 +31,7 @@ class Node:
         """
         Overloading magic method. Turn object into printable string.
         """
-        return str(self.data) 
+        return str(self.data)
 
     def __repr__(self):
         """

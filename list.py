@@ -40,7 +40,6 @@ class List():
 
         return self
 
-
     def reverse_list_iterative(self):
         """
         Reverse the direction of the arrows in the list. Iterative solution with
@@ -78,7 +77,6 @@ class List():
 
             # recursive call
             self.reverse_list_recursive(next, curr)
-
 
 
     def print_list(self):

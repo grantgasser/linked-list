@@ -2,7 +2,7 @@
 ## Author: Grant Gasser
 ## 7/17/2019
 
-import list, node
+import list, node, treenode
 
 def main():
     # create nodes
@@ -32,5 +32,19 @@ def main():
 
     # verify
     linked_list.print_list()
+
+
+
+    #### BST Testing ####
+
+    # Test creation tree node
+    root = treenode.TreeNode(5)
+
+    print('\nExpecting 5:', root.get_data())
+
+    # Test get child functions
+    print('\nExpecting None:', root.get_left_child())
+    print('Expecting None:', root.get_right_child())
+
 
 main()
