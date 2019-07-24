@@ -8,7 +8,8 @@ This project is also an exercise in seeing how interrelated common data structur
 ## Linked List (base of the project)
 Using the Node class, the List class just contains a head. It has methods that allow it to retrieve the head, append new data, get data at a certain position, insert, delete, reverse, and more.
 
-## Stack (inherits from Linked List)
+## Stack 
+Inherits from the Linked List class. 
 
 ## Tree Node 
 Inherits from Node class used for linked lists. 
